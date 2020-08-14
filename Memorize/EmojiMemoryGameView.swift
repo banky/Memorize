@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  EmojiMemoryGameView.swift
 //  Memorize
 //
 //  Created by Bankole Adebajo on 2020-08-09.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct EmojiMemoryGameView: View {
     var emojiMemoryGame: EmojiMemoryGame
     
     var body: some View {
@@ -21,7 +21,6 @@ struct ContentView: View {
         }
         .padding()
         .foregroundColor(Color.orange)
-        .font(emojiMemoryGame.cards.count == 10 ? Font.title : Font.largeTitle)
     }
 }
 
@@ -31,15 +30,30 @@ struct CardView: View {
     var card: MemoryGame<String>.Card
     
     var body: some View {
+        GeometryReader { geometry in
+            self.body(for: geometry.size)
+        }
+    }
+    
+    func body(for size: CGSize) -> some View {
         ZStack {
             if card.isFaceUp {
-                RoundedRectangle(cornerRadius: 10.0).fill(Color.white)
-                RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 3)
+                RoundedRectangle(cornerRadius: cornerRadius).fill(Color.white)
+                RoundedRectangle(cornerRadius: cornerRadius).stroke(lineWidth: lineWidth)
                 Text(card.content)
             } else {
-                RoundedRectangle(cornerRadius: 10.0).fill()
+                RoundedRectangle(cornerRadius: cornerRadius).fill()
             }
-        }.aspectRatio(2/3, contentMode: .fit)
+        }
+        .aspectRatio(2/3, contentMode: .fit)
+        .font(fontSize(for: size))
+    }
+    
+    // MARK: Drawing Constants
+    let cornerRadius: CGFloat = 10
+    let lineWidth: CGFloat = 3
+    func fontSize(for size: CGSize) -> Font {
+        Font.system(size: min(size.width, size.height) * 0.75)
     }
 }
 
@@ -55,6 +69,6 @@ struct CardView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(emojiMemoryGame: EmojiMemoryGame())
+        EmojiMemoryGameView(emojiMemoryGame: EmojiMemoryGame())
     }
 }
