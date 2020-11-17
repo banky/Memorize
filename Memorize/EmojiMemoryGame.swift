@@ -8,11 +8,12 @@
 
 import Foundation
 
-class EmojiMemoryGame {
-    private var memoryGameModel: MemoryGame<String> = createEmojiMemoryGame()
+class EmojiMemoryGame: ObservableObject {
+    @Published private var memoryGameModel: MemoryGame<String> = createEmojiMemoryGame()
     
     static func createEmojiMemoryGame() -> MemoryGame<String> {
-        let numberOfPairsOfCards = Int.random(in: 2...5)
+//        let numberOfPairsOfCards = Int.random(in: 2...5)
+        let numberOfPairsOfCards = 3
         
         var allPossibleCardContent = ["👻", "🎃", "🕷", "☠️", "👹", "🙀", "🥴", "🤑", "🚀", "💲", "🐌", "🤯"];
         allPossibleCardContent.shuffle()
