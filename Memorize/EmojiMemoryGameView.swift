@@ -15,7 +15,7 @@ struct EmojiMemoryGameView: View {
         Grid(emojiMemoryGame.cards) { card in
             CardView(card: card).onTapGesture(perform: {
                 self.emojiMemoryGame.choose(card: card)
-                })
+            })
             .padding()
         }
         .foregroundColor(Color.orange)
@@ -31,27 +31,27 @@ struct CardView: View {
         }
     }
     
-    func body(for size: CGSize) -> some View {
+    private func body(for size: CGSize) -> some View {
         ZStack {
-            if !card.isMatched {
-                if card.isFaceUp {
-                    RoundedRectangle(cornerRadius: cornerRadius).fill(Color.white)
-                    RoundedRectangle(cornerRadius: cornerRadius).stroke(lineWidth: lineWidth)
-                    Text(card.content)
-                } else {
+            if card.isFaceUp {
+                RoundedRectangle(cornerRadius: cornerRadius).fill(Color.white)
+                RoundedRectangle(cornerRadius: cornerRadius).stroke(lineWidth: lineWidth)
+                Circle()
+                Text(card.content)
+            } else {
+                if !card.isMatched {
                     RoundedRectangle(cornerRadius: cornerRadius).fill()
                 }
             }
-            
         }
-//        .aspectRatio(2/3, contentMode: .fit)
+        //        .aspectRatio(2/3, contentMode: .fit)
         .font(fontSize(for: size))
     }
-        
+    
     // MARK: Drawing Constants
-    let cornerRadius: CGFloat = 10
-    let lineWidth: CGFloat = 3
-    func fontSize(for size: CGSize) -> Font {
+    private let cornerRadius: CGFloat = 10
+    private let lineWidth: CGFloat = 3
+    private func fontSize(for size: CGSize) -> Font {
         Font.system(size: min(size.width, size.height) * 0.6)
     }
 }
@@ -68,6 +68,8 @@ struct CardView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        EmojiMemoryGameView(emojiMemoryGame: EmojiMemoryGame())
+        let game = EmojiMemoryGame()
+        game.choose(card: game.cards[0])
+        return EmojiMemoryGameView(emojiMemoryGame: game)
     }
 }

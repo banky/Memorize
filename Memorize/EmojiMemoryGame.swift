@@ -11,7 +11,7 @@ import Foundation
 class EmojiMemoryGame: ObservableObject {
     @Published private var memoryGameModel: MemoryGame<String> = createEmojiMemoryGame()
     
-    static func createEmojiMemoryGame() -> MemoryGame<String> {
+    private static func createEmojiMemoryGame() -> MemoryGame<String> {
 //        let numberOfPairsOfCards = Int.random(in: 2...5)
         let numberOfPairsOfCards = 3
         

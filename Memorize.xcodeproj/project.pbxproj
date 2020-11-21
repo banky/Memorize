@@ -18,6 +18,7 @@
 		B12295AA24E0AEB10087B8BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B12295A824E0AEB10087B8BC /* LaunchScreen.storyboard */; };
 		B12295B224E0C00E0087B8BC /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12295B124E0C00E0087B8BC /* MemoryGame.swift */; };
 		B12295B424E0C1DF0087B8BC /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12295B324E0C1DF0087B8BC /* EmojiMemoryGame.swift */; };
+		B1D026F02569C7B60048FBFA /* Array+Only.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D026EF2569C7B60048FBFA /* Array+Only.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B12295AB24E0AEB10087B8BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B12295B124E0C00E0087B8BC /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		B12295B324E0C1DF0087B8BC /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
+		B1D026EF2569C7B60048FBFA /* Array+Only.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Only.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			children = (
 				B122959D24E0AEAF0087B8BC /* AppDelegate.swift */,
 				B10D43B224ECB94600DCC642 /* Array+Identifiable.swift */,
+				B1D026EF2569C7B60048FBFA /* Array+Only.swift */,
 				B122959F24E0AEAF0087B8BC /* SceneDelegate.swift */,
 				B12295A124E0AEAF0087B8BC /* EmojiMemoryGameView.swift */,
 				B12295B124E0C00E0087B8BC /* MemoryGame.swift */,
@@ -164,6 +167,7 @@
 				B122959E24E0AEAF0087B8BC /* AppDelegate.swift in Sources */,
 				B12295A024E0AEAF0087B8BC /* SceneDelegate.swift in Sources */,
 				B12295B224E0C00E0087B8BC /* MemoryGame.swift in Sources */,
+				B1D026F02569C7B60048FBFA /* Array+Only.swift in Sources */,
 				B12295A224E0AEAF0087B8BC /* EmojiMemoryGameView.swift in Sources */,
 				B12295B424E0C1DF0087B8BC /* EmojiMemoryGame.swift in Sources */,
 				B10D43B324ECB94600DCC642 /* Array+Identifiable.swift in Sources */,
