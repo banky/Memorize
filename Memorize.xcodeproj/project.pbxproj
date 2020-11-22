@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D8BAB722569DB7100718796 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8BAB712569DB7100718796 /* Pie.swift */; };
+		2D8BAB762569E50800718796 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8BAB752569E50800718796 /* Cardify.swift */; };
 		B10D43AF24ECB33400DCC642 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10D43AE24ECB33400DCC642 /* Grid.swift */; };
 		B10D43B124ECB69F00DCC642 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10D43B024ECB69F00DCC642 /* GridLayout.swift */; };
 		B10D43B324ECB94600DCC642 /* Array+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10D43B224ECB94600DCC642 /* Array+Identifiable.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D8BAB712569DB7100718796 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
+		2D8BAB752569E50800718796 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 		B10D43AE24ECB33400DCC642 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		B10D43B024ECB69F00DCC642 /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		B10D43B224ECB94600DCC642 /* Array+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Identifiable.swift"; sourceTree = "<group>"; };
@@ -72,8 +76,10 @@
 				B10D43B224ECB94600DCC642 /* Array+Identifiable.swift */,
 				B1D026EF2569C7B60048FBFA /* Array+Only.swift */,
 				B122959F24E0AEAF0087B8BC /* SceneDelegate.swift */,
-				B12295A124E0AEAF0087B8BC /* EmojiMemoryGameView.swift */,
+				2D8BAB712569DB7100718796 /* Pie.swift */,
 				B12295B124E0C00E0087B8BC /* MemoryGame.swift */,
+				B12295A124E0AEAF0087B8BC /* EmojiMemoryGameView.swift */,
+				2D8BAB752569E50800718796 /* Cardify.swift */,
 				B12295B324E0C1DF0087B8BC /* EmojiMemoryGame.swift */,
 				B10D43AE24ECB33400DCC642 /* Grid.swift */,
 				B10D43B024ECB69F00DCC642 /* GridLayout.swift */,
@@ -120,7 +126,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = Banky;
 				TargetAttributes = {
 					B122959924E0AEAF0087B8BC = {
@@ -129,7 +135,7 @@
 				};
 			};
 			buildConfigurationList = B122959524E0AEAF0087B8BC /* Build configuration list for PBXProject "Memorize" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -164,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D8BAB722569DB7100718796 /* Pie.swift in Sources */,
 				B122959E24E0AEAF0087B8BC /* AppDelegate.swift in Sources */,
 				B12295A024E0AEAF0087B8BC /* SceneDelegate.swift in Sources */,
 				B12295B224E0C00E0087B8BC /* MemoryGame.swift in Sources */,
@@ -172,6 +179,7 @@
 				B12295B424E0C1DF0087B8BC /* EmojiMemoryGame.swift in Sources */,
 				B10D43B324ECB94600DCC642 /* Array+Identifiable.swift in Sources */,
 				B10D43B124ECB69F00DCC642 /* GridLayout.swift in Sources */,
+				2D8BAB762569E50800718796 /* Cardify.swift in Sources */,
 				B10D43AF24ECB33400DCC642 /* Grid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +224,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -276,6 +285,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -310,7 +320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Memorize/Preview Content\"";
-				DEVELOPMENT_TEAM = 9K83JB75UC;
+				DEVELOPMENT_TEAM = 5S9TJ78KDL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Memorize/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Memorize/Preview Content\"";
-				DEVELOPMENT_TEAM = 9K83JB75UC;
+				DEVELOPMENT_TEAM = 5S9TJ78KDL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Memorize/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
